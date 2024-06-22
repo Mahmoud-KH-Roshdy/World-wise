@@ -1,0 +1,51 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav a:link,
+.nav a:visited {
+  text-decoration: none;
+  color: var(--color-light--2);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* CSS Modules feature */
+.nav a:global(.active) {
+  color: var(--color-brand--2);
+}
+
+a.ctaLink:link,
+a.ctaLink:visited {
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--0);
+  padding: 0.8rem 2rem;
+  border-radius: 7px;
+}
+
+@media (max-width:768px) {
+  .nav ul{
+    flex-flow: column nowrap;
+    background-color: #42484d;
+    position: fixed;
+    top: 0;
+    right: -1000px;
+    height: 100vh;
+    width: 200px;
+    padding-top: 3.5rem;
+    transition: all 0.5s;
+  }
+  li{
+    color: white;
+  }
+}

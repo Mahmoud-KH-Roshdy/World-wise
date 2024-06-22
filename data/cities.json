@@ -1,0 +1,16 @@
+{
+  "cities": [
+    {
+      "id": "c8ba",
+      "cityName": "Cairo",
+      "country": "Egypt",
+      "emoji": "🇪🇬",
+      "date": "2024-06-22T01:21:48.391Z",
+      "notes": "",
+      "position": {
+        "lat": 30.013219833932094,
+        "lng": 31.28013610839844
+      }
+    }
+  ]
+}
