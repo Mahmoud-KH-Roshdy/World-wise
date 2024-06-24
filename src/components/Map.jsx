@@ -6,11 +6,13 @@ import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvent } from "rea
 import Button from "./Button";
 import { useGeolocation } from "../hooks/useGeolocation";
 import { useUrlPosition } from "../hooks/useUrlPosition";
-
+import { useAuth } from "../context/FakeAuthContext";
+import User from "./User";
 function Map() {
-    const { cities } = useCities()
-    const [mapPosition, setMapPosition] = useState([40, 0])
-    const [lat, lng] = useUrlPosition()
+    const { cities } = useCities();
+    const [mapPosition, setMapPosition] = useState([40, 0]);
+    const [lat, lng] = useUrlPosition();
+    const {isAuthenticated} = useAuth()
     const {
         isLoading: isLoadingPosition,
         position: geolocationPosition,
@@ -21,7 +23,7 @@ function Map() {
             if (lat && lng) return setMapPosition([lat, lng])
         },
         [lat, lng]
-    )
+    );
     useEffect(
         function () {
             if (geolocationPosition)
@@ -31,6 +33,7 @@ function Map() {
     );
     return (
         <div className={styles.mapContainer}>
+            {isAuthenticated && <User/>}
             {!geolocationPosition && (
                 <Button type="position" onClick={getPosition}>
                     {isLoadingPosition ? "Loading..." : "Use your position"}

@@ -1,8 +1,11 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h1> World-wise</h1>
+<p>This app was developed to help you take notes about the cities you visited</p>
+<p>The tech used in it's</p>
+<ul>
+    <li>React</li>
+    <li>React Router</li>
+    <li>React leaflet</li>
+    <li>React datepicker</li>
+    <li>Context API</li>
+    <li>More and More Hooks like usememe and other </li>
+</ul>

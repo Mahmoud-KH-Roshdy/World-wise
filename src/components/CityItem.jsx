@@ -1,6 +1,7 @@
-import { Link, useParams } from "react-router-dom";
+import { Link} from "react-router-dom";
 import styles from "./CityItem.module.css";
 import { useCities } from "../context/CitiesContext";
+import Spinner from "./Spinner";
 const formatDate = (date) =>
     new Intl.DateTimeFormat("en", {
         day: "numeric",
@@ -9,12 +10,13 @@ const formatDate = (date) =>
     }).format(new Date(date));
 
 function CityItem({ city }) {
-    const { currentCity,deleteCity } = useCities()
+    const { currentCity,deleteCity,isLoading } = useCities()
     const { emoji, date, cityName, id, position } = city;
     function handleClick(e) {
         e.preventDefault();
-        deleteCity(city.id)
+        deleteCity(id)
     }
+    if (isLoading) return <Spinner />
     return (
         <li>
             <Link className={`${styles.cityItem} ${ id === currentCity.id ? styles['cityItem--active'] : ""}`} to={`${id}?lat=${position.lat}&lng=${position.lng}`}>

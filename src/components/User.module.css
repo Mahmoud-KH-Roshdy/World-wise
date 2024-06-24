@@ -32,3 +32,9 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+@media(max-width:768px){
+  .user{
+    display:none;
+  }
+}
