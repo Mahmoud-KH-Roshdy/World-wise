@@ -5,7 +5,6 @@
 }
 
 .form {
-  background-color: var(--color-dark--2);
   border-radius: 7px;
   padding: 2rem 3rem;
   display: flex;
@@ -14,7 +13,21 @@
   width: 500px;
   margin: 8rem auto;
 }
-
+.form button{
+  color: inherit;
+  text-transform: uppercase;
+  padding: 0.8rem 1.6rem;
+  font-family: inherit;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--1);
+  color: white;
+  width: 100%;
+}
 .row {
   display: flex;
   flex-direction: column;

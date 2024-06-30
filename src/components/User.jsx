@@ -9,7 +9,7 @@ function User() {
   const navigator = useNavigate()
   function handleClick() {
     logout();
-    navigator("/");
+    navigator("/login");
   }
 
   return (

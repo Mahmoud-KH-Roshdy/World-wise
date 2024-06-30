@@ -1,12 +1,12 @@
-import { useNavigate } from "react-router-dom"
-import styles from "./Map.module.css"
-import { useCities } from "../context/CitiesContext";
 import { useEffect, useState } from "react";
-import { MapContainer, Marker, Popup, TileLayer, ZoomControl, useMap, useMapEvent } from "react-leaflet";
-import Button from "./Button";
+import { useNavigate } from "react-router-dom"
+import { MapContainer, Marker, Popup, TileLayer,  useMap, useMapEvent } from "react-leaflet";
+import { useCities } from "../context/CitiesContext";
 import { useGeolocation } from "../hooks/useGeolocation";
 import { useUrlPosition } from "../hooks/useUrlPosition";
 import { useAuth } from "../context/FakeAuthContext";
+import styles from "./Map.module.css"
+import Button from "./Button";
 import User from "./User";
 function Map() {
     const { cities } = useCities();

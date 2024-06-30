@@ -41,6 +41,7 @@ a.ctaLink:visited {
     top: 0;
     right: -1000px;
     height: 100vh;
+    width: 100%;
     width: 200px;
     padding-top: 3.5rem;
     transition: all 0.5s;
